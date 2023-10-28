@@ -1,0 +1,230 @@
+/* CSS reset*/
+*{
+    margin: 0;
+    padding: 0 ;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*CSS Variables*/
+:root{
+    --navbar-height: 59px;
+}
+
+/*Navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    position: sticky;/*to make navbar fixed*/
+    top: 0px;
+}
+/*ninja techniquie used for */
+#navbar::before{
+    content:"";
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height : 100%;
+    position: absolute;
+    z-index: -1;/*iss se mera contenrt foregropund mein aa jayega */
+    opacity: 0.7;
+}
+/* navigation bar: logo and images */
+#logo{
+    margin: 10px 34px;
+    
+}
+#logo img{
+    height: 59px;
+    margin:3px 6px;
+}
+
+/* navigation bar: list styling */
+
+
+#navbar ul {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{ 
+    color:white;/*jab bhi koi iss pe hover kare toa iska color change ho jaye*/
+    background-color:black;
+
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+#navbar ul li a:hover{ 
+    color: black;/*jab bhi koi iss pe hover kare toa iska color change ho jaye*/
+    background-color: white;
+   
+}
+
+/*Home section*/
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 578px;
+    justify-content: center;
+    align-items: center;
+}
+/*mein background insert lkarne ke liye psuedo selctor hi use karta hu*/
+/*before psuedo selctor*/
+#home::before{
+    content:"";
+    background: url('../img/bg.jpg') no-repeat center center/cover ;
+    width: 100%;
+    height : 642px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: -1;/*iss se mera contenrt foregropund mein aa jayega */
+    opacity: 0.89;
+}
+#home h1{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+/*Services section*/
+#services{
+    margin: 34px;
+    display: flex;
+    
+
+}
+#services .box{
+    border: 2px solid brown; 
+    padding: 34px;
+    margin: 25px 6px ;
+    border-radius:28px ;
+    background: rgb(106, 91, 91);
+    margin-bottom: 25px;
+}
+#services .box img{
+    height: 160px;
+    margin: auto;
+    display: block;
+    
+}
+/*yaha pe chod rahi hai himanee , and video m,ein 40 :00 par resume karna hain */
+
+
+#services.box p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/*client section*/
+#client-section{
+
+position: relative;
+}
+#client-section::before{
+    content:"";
+    position:absolute;
+    background:url('../img/bg.jpg');
+    width:100%;
+    height:54%;
+    z-index:-1;
+    opacity:0.3;
+    }
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-items{
+    padding: 34px;
+}
+#clients img{
+  height: 124px;
+
+}
+/*contact section*/
+#contact{
+position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    opacity:0.7;
+    background: url('../img/contact.jpg');
+}
+#contact-box{
+  display:flex;
+  justify-content: center;  
+  align-items: center;
+  padding-bottom:34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    border-radius:9px;
+
+
+}
+#contact-box form{
+    width: 48%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: sans-serif;
+}
+footer{
+    background: black;
+    color: aliceblue;
+    padding: 9px 20px;
+}
+
+
+/*making utility classes */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: sans-serif;
+
+}
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: sans-serif;
+}
+/*rem is relative to html */
+.btn{
+    padding: 6px 20px ;
+    border: 2px solid white;
+    background-color: lightcoral;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.center{
+    text-align: center;
+}
